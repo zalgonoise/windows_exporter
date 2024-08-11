@@ -38,6 +38,7 @@ import (
 	"github.com/prometheus-community/windows_exporter/pkg/collector/netframework_clrremoting"
 	"github.com/prometheus-community/windows_exporter/pkg/collector/netframework_clrsecurity"
 	"github.com/prometheus-community/windows_exporter/pkg/collector/nps"
+	"github.com/prometheus-community/windows_exporter/pkg/collector/ohwm"
 	"github.com/prometheus-community/windows_exporter/pkg/collector/os"
 	"github.com/prometheus-community/windows_exporter/pkg/collector/physical_disk"
 	"github.com/prometheus-community/windows_exporter/pkg/collector/printer"
@@ -100,6 +101,7 @@ var Map = map[string]types.CollectorBuilderWithFlags{
 	netframework_clrremoting.Name:        netframework_clrremoting.NewWithFlags,
 	netframework_clrsecurity.Name:        netframework_clrsecurity.NewWithFlags,
 	nps.Name:                             nps.NewWithFlags,
+	ohwm.Name:                            ohwm.NewWithFlags,
 	os.Name:                              os.NewWithFlags,
 	physical_disk.Name:                   physical_disk.NewWithFlags,
 	printer.Name:                         printer.NewWithFlags,
